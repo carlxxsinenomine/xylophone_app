@@ -10,6 +10,12 @@ void main() {
 
 class XylophoneApp extends StatelessWidget {
 
+  void playSound(int noteNum) {
+    final player = AudioPlayer();
+    player.audioCache = AudioCache();
+    player.play(AssetSource('note$noteNum.wav'));
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,66 +26,80 @@ class XylophoneApp extends StatelessWidget {
               children: <Widget>[
                 TextButton(
                   onPressed: () {
-                    final player = AudioPlayer();
-                    player.audioCache = AudioCache();
-                    player.play(AssetSource('note1.wav'));
+                    playSound(1);
                   },
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.cyanAccent,
+                    foregroundColor: Colors.black,
+                  ),
                   child:
                     Text('Click Me!'),
                 ),
                 TextButton(
                   onPressed: () {
-                    final player = AudioPlayer();
-                    player.audioCache = AudioCache();
-                    player.play(AssetSource('note2.wav'));
+                    playSound(2);
                   },
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.cyan,
+                    foregroundColor: Colors.black,
+                  ),
                   child:
-                    Text('Click Me!'),
+                  Text('Click Me!'),
                 ),
                 TextButton(
                   onPressed: () {
-                    final player = AudioPlayer();
-                    player.audioCache = AudioCache();
-                    player.play(AssetSource('note3.wav'));
+                    playSound(3);
                   },
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.teal,
+                    foregroundColor: Colors.black,
+                  ),
                   child:
-                    Text('Click Me!'),
+                  Text('Click Me!'),
                 ),
                 TextButton(
                   onPressed: () {
-                    final player = AudioPlayer();
-                    player.audioCache = AudioCache();
-                    player.play(AssetSource('note4.wav'));
+                    playSound(4);
                   },
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.red,
+                    foregroundColor: Colors.black,
+                  ),
                   child:
-                    Text('Click Me!'),
+                  Text('Click Me!'),
                 ),
                 TextButton(
                   onPressed: () {
-                    final player = AudioPlayer();
-                    player.audioCache = AudioCache();
-                    player.play(AssetSource('note5.wav'));
+                    playSound(5);
                   },
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.amber,
+                    foregroundColor: Colors.black,
+                  ),
                   child:
-                    Text('Click Me!'),
+                  Text('Click Me!'),
                 ),
                 TextButton(
                   onPressed: () {
-                    final player = AudioPlayer();
-                    player.audioCache = AudioCache();
-                    player.play(AssetSource('note6.wav'));
+                    playSound(6);
                   },
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.deepOrange,
+                    foregroundColor: Colors.black,
+                  ),
                   child:
-                    Text('Click Me!'),
+                  Text('Click Me!'),
                 ),
                 TextButton(
                   onPressed: () {
-                    final player = AudioPlayer();
-                    player.audioCache = AudioCache();
-                    player.play(AssetSource('note7.wav'));
+                    playSound(7);
                   },
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.purple,
+                    foregroundColor: Colors.black,
+                  ),
                   child:
-                    Text('Click Me!'),
+                  Text('Click Me!'),
                 ),
               ]
             ),
