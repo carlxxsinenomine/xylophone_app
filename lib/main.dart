@@ -20,89 +20,125 @@ class XylophoneApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
-          child: Center(
-            child: Column(
-              children: <Widget>[
-                TextButton(
-                  onPressed: () {
-                    playSound(1);
-                  },
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.cyanAccent,
-                    foregroundColor: Colors.black,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              Expanded(
+                child: SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () {
+                      playSound(1);
+                    },
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.cyanAccent,
+                      foregroundColor: Colors.black,
+                    ),
+                    child:
+                      Text('Note 1'),
                   ),
-                  child:
-                    Text('Click Me!'),
                 ),
-                TextButton(
-                  onPressed: () {
-                    playSound(2);
-                  },
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.cyan,
-                    foregroundColor: Colors.black,
+              ),
+              Expanded(
+                child: SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () {
+                      playSound(2);
+                    },
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.cyan,
+                      foregroundColor: Colors.black,
+                    ),
+                    child:
+                    Text('Note 2'),
                   ),
-                  child:
-                  Text('Click Me!'),
                 ),
-                TextButton(
-                  onPressed: () {
-                    playSound(3);
-                  },
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.teal,
-                    foregroundColor: Colors.black,
+              ),
+              Expanded(
+                child: SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () {
+                      playSound(3);
+                    },
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.teal,
+                      foregroundColor: Colors.black,
+                    ),
+                    child:
+                    Text('Note 3'),
                   ),
-                  child:
-                  Text('Click Me!'),
                 ),
-                TextButton(
-                  onPressed: () {
-                    playSound(4);
-                  },
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.red,
-                    foregroundColor: Colors.black,
+              ),
+              Expanded(
+                child: SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () {
+                      playSound(4);
+                    },
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.red,
+                      foregroundColor: Colors.black,
+                    ),
+                    child:
+                    Text('Note 4'),
                   ),
-                  child:
-                  Text('Click Me!'),
                 ),
-                TextButton(
-                  onPressed: () {
-                    playSound(5);
-                  },
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.amber,
-                    foregroundColor: Colors.black,
+              ),
+              Expanded(
+                child: SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () {
+                      playSound(5);
+                    },
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.amber,
+                      foregroundColor: Colors.black,
+                    ),
+                    child:
+                    Text('Note 5'),
                   ),
-                  child:
-                  Text('Click Me!'),
                 ),
-                TextButton(
-                  onPressed: () {
-                    playSound(6);
-                  },
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.deepOrange,
-                    foregroundColor: Colors.black,
+              ),
+              Expanded(
+                child: SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () {
+                      playSound(6);
+                    },
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.deepOrange,
+                      foregroundColor: Colors.black,
+                    ),
+                    child:
+                    Text('Note 6'),
                   ),
-                  child:
-                  Text('Click Me!'),
                 ),
-                TextButton(
-                  onPressed: () {
-                    playSound(7);
-                  },
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.purple,
-                    foregroundColor: Colors.black,
+              ),
+              Expanded(
+                child: SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () {
+                      playSound(7);
+                    },
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.purple,
+                      foregroundColor: Colors.black,
+                    ),
+                    child:
+                    Text('Note 7'),
                   ),
-                  child:
-                  Text('Click Me!'),
                 ),
-              ]
-            ),
+              ),
+            ]
           ),
         ),
       ),
