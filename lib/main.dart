@@ -16,6 +16,24 @@ class XylophoneApp extends StatelessWidget {
     player.play(AssetSource('note$noteNum.wav'));
   }
 
+  Expanded buildKey(int noteNum, Color color) {
+    return Expanded(
+      child: SizedBox(
+        width: double.infinity,
+        child: TextButton(
+          onPressed: () {
+            playSound(noteNum);
+          },
+          style: TextButton.styleFrom(
+            backgroundColor: color,
+            foregroundColor: Colors.black,
+          ),
+          child:
+          Text('Note $noteNum'),
+        ),
+      ),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,118 +44,13 @@ class XylophoneApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
-              Expanded(
-                child: SizedBox(
-                  width: double.infinity,
-                  child: TextButton(
-                    onPressed: () {
-                      playSound(1);
-                    },
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.cyanAccent,
-                      foregroundColor: Colors.black,
-                    ),
-                    child:
-                      Text('Note 1'),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: SizedBox(
-                  width: double.infinity,
-                  child: TextButton(
-                    onPressed: () {
-                      playSound(2);
-                    },
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.cyan,
-                      foregroundColor: Colors.black,
-                    ),
-                    child:
-                    Text('Note 2'),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: SizedBox(
-                  width: double.infinity,
-                  child: TextButton(
-                    onPressed: () {
-                      playSound(3);
-                    },
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.teal,
-                      foregroundColor: Colors.black,
-                    ),
-                    child:
-                    Text('Note 3'),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: SizedBox(
-                  width: double.infinity,
-                  child: TextButton(
-                    onPressed: () {
-                      playSound(4);
-                    },
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.red,
-                      foregroundColor: Colors.black,
-                    ),
-                    child:
-                    Text('Note 4'),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: SizedBox(
-                  width: double.infinity,
-                  child: TextButton(
-                    onPressed: () {
-                      playSound(5);
-                    },
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.amber,
-                      foregroundColor: Colors.black,
-                    ),
-                    child:
-                    Text('Note 5'),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: SizedBox(
-                  width: double.infinity,
-                  child: TextButton(
-                    onPressed: () {
-                      playSound(6);
-                    },
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.deepOrange,
-                      foregroundColor: Colors.black,
-                    ),
-                    child:
-                    Text('Note 6'),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: SizedBox(
-                  width: double.infinity,
-                  child: TextButton(
-                    onPressed: () {
-                      playSound(7);
-                    },
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.purple,
-                      foregroundColor: Colors.black,
-                    ),
-                    child:
-                    Text('Note 7'),
-                  ),
-                ),
-              ),
+              buildKey(1, Colors.cyan),
+              buildKey(2, Colors.purple),
+              buildKey(3, Colors.deepOrange),
+              buildKey(4, Colors.amber),
+              buildKey(5, Colors.teal),
+              buildKey(6, Colors.blue),
+              buildKey(7, Colors.lightGreen),
             ]
           ),
         ),
