@@ -2,11 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-void main() {
-  runApp(
-    XylophoneApp()
-  );
-}
+void main() => runApp(XylophoneApp());
+
 
 class XylophoneApp extends StatelessWidget {
 
@@ -16,7 +13,7 @@ class XylophoneApp extends StatelessWidget {
     player.play(AssetSource('note$noteNum.wav'));
   }
 
-  Expanded buildKey(int noteNum, Color color) {
+  Expanded buildKey({ required int noteNum, required Color color}) {
     return Expanded(
       child: SizedBox(
         width: double.infinity,
@@ -44,13 +41,13 @@ class XylophoneApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
-              buildKey(1, Colors.cyan),
-              buildKey(2, Colors.purple),
-              buildKey(3, Colors.deepOrange),
-              buildKey(4, Colors.amber),
-              buildKey(5, Colors.teal),
-              buildKey(6, Colors.blue),
-              buildKey(7, Colors.lightGreen),
+              buildKey(noteNum: 1, color: Colors.cyan),
+              buildKey(noteNum: 2, color: Colors.purple),
+              buildKey(noteNum: 3, color: Colors.deepOrange),
+              buildKey(noteNum: 4, color: Colors.amber),
+              buildKey(noteNum: 5, color: Colors.teal),
+              buildKey(noteNum: 6, color: Colors.blue),
+              buildKey(noteNum: 7, color: Colors.lightGreen),
             ]
           ),
         ),
